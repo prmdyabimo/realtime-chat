@@ -56,25 +56,10 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // pass show / hide
-        // from input password
-        var passField = document.getElementById("pass");
-        var toggleBtn = document.getElementById("btn-eye");
-
-        toggleBtn.onclick = () => {
-            if (passField.type == "password") {
-            passField.type = "text";
-            toggleBtn.classList.add("active");
-            } else {
-            passField.type = "password";
-            toggleBtn.classList.remove("active");
-            }
-        };
-    </script>
-
     <script src="js/login.js"></script>
+
+
+    <script src="js/pass_show-hide.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
 

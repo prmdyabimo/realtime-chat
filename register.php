@@ -68,7 +68,7 @@
                             <!-- BUTTON REGISTER -->
                             <div class="flex -mx-3">
                                 <div class="w-full px-3 my-4">
-                                    <button type="submit" class="button block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER</button>
+                                    <button class="button block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER</button>
                                 </div>
                             </div>
                             <!-- LOGIN -->
@@ -85,24 +85,9 @@
         </div>
     </div>
 
-    <script>
-        // pass show / hide
-        // from input password
-        var passField = document.getElementById("pass");
-        var toggleBtn = document.getElementById("btn-eye");
-
-        toggleBtn.onclick = () => {
-            if (passField.type == "password") {
-            passField.type = "text";
-            toggleBtn.classList.add("active");
-            } else {
-            passField.type = "password";
-            toggleBtn.classList.remove("active");
-            }
-        };
-    </script>
 
     <script src="js/register.js"></script>
+    <script src="js/pass_show-hide.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
 

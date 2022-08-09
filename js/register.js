@@ -1,3 +1,4 @@
+
 // REGISTER
 const form = document.querySelector(".form");
 const continueBtn = form.querySelector(".button");

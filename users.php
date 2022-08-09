@@ -11,63 +11,42 @@
       <section class="px-[25px] py-[30px]">
         <header class="flex items-center justify-between border-b-2 border-slate-100 pb-[20px]">
           <?php 
-              
+
+            include_once "php/config.php";
+            $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+            if (mysqli_num_rows($sql) > 0) {
+              $row = mysqli_fetch_assoc($sql);
+            }
+
           ?>
           <div class="flex">
-            <img src="img/b.jpg" alt="" class="w-[50px] h-[50px] object-cover rounded-full">
+            <img src="php/image_users/<?php echo $row['img'] ?>" alt="" class="w-[50px] h-[50px] object-cover rounded-full">
             <div class="ml-[15px]">
-              <span class="text-[18px] font-semibold">Prmdya Bimo</span>
-              <p>Active Now</p>
+              <span class="text-[18px] font-semibold"><?php echo $row['first_name'] . " " . $row['last_name'] ?></span>
+              <p><?php echo $row['status'] ?></p>
             </div>
           </div>
           <a href="" class="text-[#fff] px-[15px] py-[7px] bg-slate-400 rounded">Logout</a>
         </header>
-        <div class="mb-0 mt-4 flex">
+        <div class="mb-0 mt-4 flex flex-row">
           <span class="hidden">Select an user to start chat</span>
           <input type="text" id="small-input" placeholder="Enter name to search" id="search" class="search opacity-[0] block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-0 transition-all duration-300">
-          <button><i id="btn-search" class="btn-search fas fa-search ml-1 bg-slate-400 w-[47px] h-[42px] flex items-center justify-center rounded-lg"></i></button>
+          <div>
+            <i id="btn-search" class="btn-search fas fa-search ml-1 bg-slate-400 w-[47px] h-[42px] flex items-center justify-center rounded-lg"></i>
+          </div>
+
         </div>
         <!-- USER LIST -->
-        <div class="user-list max-h-[350px] overflow-y-auto">
-          <a href="" class="flex items-center justify-between pb-[20px] pr-[15px] border-b-2 border-slate-100">
-            <div class="flex mt-4 mb-0 items-center ">
-              <img src="img/b.jpg" alt="" class="w-[40px] h-[40px] object-cover rounded-full">
-              <div class="ml-[15px]">
-                <span class="text-[18px] font-semibold">Prmdya Bimo</span>
-                <p class="text-gray-400">This is test message</p>
-              </div>
-            </div>
-            <div class="text-[12px] text-[#468669] text-center">
-              <i class="fas fa-circle "></i>
-            </div>
-          </a>
+        <div class="users-list max-h-[350px] overflow-y-auto">
+          
         </div>
       </section>
     </div>
   </div>
 
-  <script>
-    // search btn
-    var search = document.querySelector(".search")
-    var searchBtn = document.querySelector(".btn-search")
-    
-    searchBtn.onclick = () => {
-      if (search.type == "text" ) {
-        search.type = "search"
-        search.classList.remove("opacity-[0]");
-        search.classList.add("search-active");
-        search.focus()
-      } else {
-        search.type = "text";
-        search.classList.remove("search-active");
-        search.classList.add("opacity-[0]");
-      }
-    }
-  </script>
-
+  <script src="js/users.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
-  <script src="js/script.js"></script>
 
 </body>
 </html>

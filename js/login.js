@@ -1,3 +1,4 @@
+console.log("login");
 // LOGIN
 const form = document.querySelector(".form");
 const continueBtn = form.querySelector(".button");
