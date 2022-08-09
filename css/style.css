@@ -1,0 +1,32 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css');
+
+/* chat */
+.details-chat-right {
+  max-width: calc(100% - 130px);
+  margin-left: auto;
+}
+
+.details-chat-left {
+  max-width: calc(100% - 130px);
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+:is(.user-list, .chat-box)::-webkit-scrollbar{
+  width: 0px;
+}
+/* chat */
+
+/* hide/show pass */
+#btn-eye.active::before{
+  color: #333;
+  content: "\f070";
+} 
+/* hide/show pass */
+
+/* search */
+.search-active {
+  opacity: 1;
+}
+
+/* search */
