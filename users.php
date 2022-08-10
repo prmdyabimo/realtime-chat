@@ -32,7 +32,7 @@
           <span class="hidden">Select an user to start chat</span>
           <input type="text" id="small-input" placeholder="Enter name to search" id="search" class="search opacity-[0] block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-0 transition-all duration-300">
           <div>
-            <i id="btn-search" class="btn-search fas fa-search ml-1 bg-slate-400 w-[47px] h-[42px] flex items-center justify-center rounded-lg"></i>
+            <i id="btn-search" class="btn-search fas fa-search cursor-pointer ml-1 bg-slate-400 w-[47px] h-[42px] flex items-center justify-center rounded-lg"></i>
           </div>
 
         </div>
