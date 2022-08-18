@@ -18,7 +18,7 @@
           $output .= '
             <div class="flex">
               <div class="details-chat-right">
-                <p class="px-[8px] py-[16px] bg-gray-900 rounded-tl-[18px] rounded-bl-[18px] rounded-tr-[18px] break-words">'. $row['msg'] .'</p>
+                <p class="my-2 px-[8px] py-[16px] bg-gray-900 rounded-tl-[18px] rounded-bl-[18px] rounded-tr-[18px] break-words">'. $row['msg'] .'</p>
               </div>
             </div>
           ';
