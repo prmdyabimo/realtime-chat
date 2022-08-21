@@ -23,6 +23,14 @@ sendMessage.onclick = () => {
   xhr.send(formData); // mengirim data form ke php
 };
 
+chatBox.onmouseenter = () => {
+  chatBox.classList.add("active");
+};
+
+chatBox.onmouseleave = () => {
+  chatBox.classList.remove("active");
+};
+
 setInterval(() => {
   let xhr = new XMLHttpRequest(); // creating XML object
   xhr.open("POST", "php/get-chat.php", true);
@@ -31,6 +39,9 @@ setInterval(() => {
       if (xhr.status === 200) {
         let data = xhr.response;
         chatBox.innerHTML = data;
+        if (!chatBox.classList.contains("active")) { // apabila tidak ada class active
+          scrollToBottom();
+        }
       }
     }
   };
@@ -38,3 +49,7 @@ setInterval(() => {
   let formData = new FormData(formMessage); // creating new formData object
   xhr.send(formData); // mengirim data form ke php
 }, 500); // 500ms
+
+function scrollToBottom() {
+  chatBox.scrollTop = chatBox.scrollHeight;
+}

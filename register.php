@@ -1,4 +1,17 @@
-<?php include_once "header.php";  ?>
+<?php 
+
+    session_start();
+    if (isset($_SESSION['unique_id'])) {
+        header("location: users.php");
+    }
+
+?>
+
+<?php 
+
+    include_once "header.php"; 
+
+?>
 <body>
     <div class="w-[100%] min-h-screen bg-gray-900 flex items-center justify-center px-5 py-5 ">
         <div class="w-[50%] bg-gray-100 text-gray-500 rounded-3xl shadow-xl overflow-hidden">

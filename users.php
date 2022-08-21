@@ -26,7 +26,7 @@
               <p><?php echo $row['status'] ?></p>
             </div>
           </div>
-          <a href="" class="text-[#fff] px-[15px] py-[7px] bg-slate-400 rounded">Logout</a>
+          <a href="php/logout.php?logout_id=<?php echo $row['unique_id'] ?>" class="text-[#fff] px-[15px] py-[7px] bg-slate-400 rounded">Logout</a>
         </header>
         <div class="mb-0 mt-4 flex flex-row">
           <span class="hidden">Select an user to start chat</span>
