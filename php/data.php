@@ -17,7 +17,7 @@
       // pesan apabila kita mengirim pesan
       ($outgoing_id == $row2['outgoing_msg_id']) ? $you = "You : " : $you = "";
       // pengecekan apakah user online atau offline
-      ($row['status'] == "Sedang Aktif") ? $offline = "text-[#468669]" : $offline = "";
+      ($row['status'] == "Sedang Aktif") ? $offline = "text-[#4affad]" : $offline = "";
       // if ($row['status'] === "Sedang Aktif") {
       //   $online = "online";
       // } else {
